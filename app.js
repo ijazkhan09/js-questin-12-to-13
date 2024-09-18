@@ -82,23 +82,18 @@ alert(greeting)
 
 
 // Question No 07
-var time = +(prompt("Enter time in 24-hour clock format (e.g., 1900 for 7pm): "));
-var hours = Math.floor(time / 100);
-var minutes = time % 100;
-var standered;
-if (hours > 12) {
-  hours -= 12;
-  standered = "pm";
-} else if (hours === 12) {
-  standered = "pm";
-} else {
-  standered = "am";
+var time = +prompt("Enter time in 24-hour clock format (e.g., 1900 for 7pm): ");
+
+var defult;
+if(time >= 0 && time <= 1200){
+  alert("Good Morning")
 }
-alert(`${hours}:${minutes.toString().padStart(2, '0')} ${standered}`);
-if (hours < 12) {
-  alert("Good morning");
-} else if (hours < 17) {
-  alert("Good afternoon");
-} else {
-  alert("Good evening");
+else if(time >= 1200 && time <= 1700){
+  alert("Good afternoon")
+}
+else if(time >= 1700 && time <= 2100){
+  alert("Good Evning")
+}
+else if(time >= 2100 && time <= 2400){
+  alert("Good Night")
 }
